@@ -1,0 +1,14 @@
+
+public class ForIn01 {
+	public static void main(String[] args) {
+		int[] a = {10, 20, 30, 40, 50};
+		
+		// 확장 for문
+				for(int i : a) {
+					System.out.println(i);
+				}
+				
+				
+				double[] d = {1.1, 2.2, 3.3, 4.4, 5.5};
+	}
+}

@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+//1~4번까지 메뉴를 입력하고, 1~4번이 아니라면 메뉴화면을 계속 보여주는 프로그램을 작성하시오.
+public class Dowhile02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int menu = sc.nextInt();
+		
+		do {
+			System.out.println("메뉴 선택 화면");
+			System.out.println("메뉴 1번 파일 읽기");
+			System.out.println("메뉴 2번 파일 열기");
+			System.out.println("메뉴 1번 파일 저장");
+			System.out.println("메뉴 1번 파일 삭제");
+			
+		}while(menu<=4);
+		
+		switch(menu) {
+		case 1:
+			System.out.println("파일 읽기");
+			break;
+		case 2:
+			System.out.println("파일 열기");
+			break;
+		case 3:
+			System.out.println("파일 저장");
+			break;
+		case 4:
+			System.out.println("파일 삭제");
+			break;
+		}
+		
+		sc.close();
+	}
+}
