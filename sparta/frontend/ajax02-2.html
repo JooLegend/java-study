@@ -22,6 +22,9 @@
             padding: 10px;
             border: 1px solid;
         }
+        .bad{
+            color: green;
+        }
     </style>
 
     <script>
@@ -43,6 +46,10 @@
                                     <td>${bike_cnt}</td>
                                     </tr>`
                         $('#names-q1').append(temp_html);
+
+                        if(bike_cnt >5){
+                            
+                        }
                     }
                 }
             })
