@@ -61,12 +61,26 @@
         }
 
     </style>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+                data: {},
+                success: function (response) {
+                    let temp = response['temp']
+                    $('#temp').text(temp)
+                }
+            })
+        });
+    </script>
 
 </head>
 
 <body>
     <div class="mytitle">
         <h1>창모 팬명록</h1>
+        <p>현재기 : <span id="temp">00.00</span>도</p>
     </div>
     <div class="mypost">
         <div class="form-floating mb-3">
