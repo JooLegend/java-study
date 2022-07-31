@@ -13,7 +13,7 @@ music = soup.select('#body-content > div.newest-list > div > table > tbody > tr'
 
 for m in music:
     rank = m.select_one('td.number').text[0:2].strip()
-    title = m.select_one('td.info > a.title.ellipsis').text.strip()
+    title = m.select_one('td.info > a.title.ellipsis').text.strip().lstrip("19금").strip()
     star = m.select_one('td.info > a.artist.ellipsis').text.strip()
 
-    print(rank,title.lstrip("19금").strip(),star)
+    print(rank,title,star)
