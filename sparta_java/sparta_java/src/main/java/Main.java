@@ -1,22 +1,21 @@
-import java.util.Scanner;
+import pkg.ModifierTest;
+
+class Child extends ModifierTest{
+    void callParetProtected(){
+        System.out.println("call my parent's protected method");
+        super.messageProtected();
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int score = sc.nextInt();
-        System.out.println("시험 점수 입력 : ");
+        ModifierTest modifierTest = new ModifierTest();
+        modifierTest.messageOutside();
+//        modifierTest.messageInside();
+//        modifierTest.messageProtected();
 
-
-        if(score >= 91){
-            System.out.println("A등급");
-        } else if (score >= 81) {
-            System.out.println("B등급");
-        }
-        else if (score >= 71) {
-            System.out.println("C등급");
-        }else{
-            System.out.println("F등급");
-        }
+        Child child = new Child();
+        child.callParetProtected();
 
     }
 }
