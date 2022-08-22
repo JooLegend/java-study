@@ -1,12 +1,6 @@
-let sprice = 10000;
-let shprice = 90000;
-let total = 0;
+let pricea = 1000
+let priceb = 2000
+let pricec = (pricea + priceb) * 0.8
 
-total += sprice;
-console.log(total);
+console.log('총' + pricec + '원에 구입하였습니다.')
 
-total += shprice;
-console.log(total);
-
-total -= sprice;
-console.log(total);
