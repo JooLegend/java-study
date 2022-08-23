@@ -1,12 +1,7 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("김정우", "김호정", "이하늘", "이정희", "박정우", "박지현", "정우석", "이지수");
-        System.out.println("이 씨" + names.stream()
-                .filter(name -> name.startsWith("이"))
-                .count());
-
+        System.out.println("Hello World");
     }
 }
