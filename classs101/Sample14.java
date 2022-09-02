@@ -11,10 +11,9 @@ public class Sample14 {
         int[][] scores1 = new int[2][3];
         scores1[0] = score1;
         scores1[1] = score2;
-
         System.out.println(Arrays.deepToString(scores1));
 
-        int[][] scores2 = new int[][]{score1,score2};
+        int[][] scores2 = new int[][] {score1,score2};
         System.out.println(Arrays.deepToString(scores2));
 
         int[][] scores3 = new int[2][3];
@@ -24,5 +23,6 @@ public class Sample14 {
         scores3[1][2] = 5;
 
         System.out.println(Arrays.deepToString(scores3));
+
     }
 }
