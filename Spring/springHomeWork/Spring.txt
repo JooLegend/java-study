@@ -1,0 +1,41 @@
+1. 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
+
+body
+
+
+2. 어떤 상황에 어떤 방식의 request를 써야하나요?
+
+글 작성 : @PostMapping
+작성 조회 : @GetMapping
+글 수정 : @PutMapping
+글 삭제 @DeleteMapping
+
+3. RESTful한 API를 설계했나요? 어떤 부분이 그런가요? 어떤 부분이 그렇지 않나요?
+비밀번호 일치를 빼고는 모두 그런거같습니다.
+
+4. 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service)
+
+잘 분리하였습니다.
+
+Controller에 @RestController를 사용하여 반환값이 HTTP message body에 입력되게 하였고
+Repository에 JpaRepository를 상속해서 DB에 접근하는 메서드들을 사용하게 하였고
+Service에서 client에게 데이터를 주었습니다.
+
+
+5. 작성한 코드에서 빈(Bean)을 모두 찾아보세요!
+
+public class PostService
+public class PostController extends Post
+public Post createMemo(@RequestBody PostRequestDto requestDto)
+public List<Post> getposts()
+public Optional<Post> getpost(@PathVariable Long id)
+public String passwordCheck(@PathVariable Long id,String password)
+public Long deletePost(@PathVariable Long id)
+public Long updatePost(@PathVariable Long id, @RequestBody PostRequestDto requestDto)
+@SpringBootApplication
+public class SpringHomeWorkApplication
+public static void main(String[] args)
+public interface PostRepository extends JpaRepository<Post, Long>
+
+6. API 명세서 작성 가이드라인을 검색하여 직접 작성한 명세서와 비교해보세요!
+
