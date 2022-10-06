@@ -21,7 +21,6 @@ public class PostController extends Post {
     @PostMapping("/api/posts")
     public Post createMemo(@RequestBody PostRequestDto requestDto) {
         Post post = new Post(requestDto);
-
         return postRepository.save(post);
     }
 
