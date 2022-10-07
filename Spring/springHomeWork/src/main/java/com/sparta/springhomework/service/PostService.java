@@ -2,12 +2,15 @@ package com.sparta.springhomework.service;
 
 import com.sparta.springhomework.domain.Post;
 import com.sparta.springhomework.dto.PostRequestDto;
+import com.sparta.springhomework.dto.ResponseDto;
 import com.sparta.springhomework.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RequiredArgsConstructor
@@ -25,7 +28,15 @@ public class PostService {
         post.update(requestDto);
         return post.getId();
     }
+    private List<ResponseDto> test(){
+        List<Post> posts = postRepository.findAll();
 
+        for (int i = 0; i < posts.size(); i++) {
+            ResponseDto responseDto += posts[i];
+        }
+
+        return postRequestDto;
+    }
 
     public boolean pwCheck(Long id, String password){
         Post post = postRepository.findById(id).orElseThrow(
