@@ -28,15 +28,6 @@ public class PostService {
         post.update(requestDto);
         return post.getId();
     }
-    private List<ResponseDto> test(){
-        List<Post> posts = postRepository.findAll();
-
-        for (int i = 0; i < posts.size(); i++) {
-            ResponseDto responseDto += posts[i];
-        }
-
-        return postRequestDto;
-    }
 
     public boolean pwCheck(Long id, String password){
         Post post = postRepository.findById(id).orElseThrow(

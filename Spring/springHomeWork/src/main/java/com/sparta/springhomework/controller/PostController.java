@@ -5,7 +5,6 @@ import com.sparta.springhomework.dto.PostRequestDto;
 import com.sparta.springhomework.repository.PostRepository;
 import com.sparta.springhomework.service.PostService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
